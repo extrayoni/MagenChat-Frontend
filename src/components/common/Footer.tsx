@@ -54,7 +54,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2 rtl:space-x-reverse">
               <img 
-                src="/MagenChat-Frontend/copped LOGO.jpg" 
+                src="/MagenChat-Frontend/cropped-LOGO.jpg" 
                 alt="MagenChat Logo" 
                 className="h-10 w-10 rounded-full object-cover"
               />
