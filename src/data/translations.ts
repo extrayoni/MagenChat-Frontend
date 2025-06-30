@@ -8,7 +8,7 @@ export const translations = {
     pricing: 'מחירים',
     
     // Hero Section
-    heroTitle: 'וואטסאפ בטוח לילדים. בזמן אמת. בלי אפליקציה.',
+    heroTitle: 'וואטסאפ בטוח לילדים. בזמן אמת. בלי התקנות מיותרות.',
     heroSubtitle: 'מגןצ\'אט מסנן טקסט, הקלטות קוליות, תמונות וקישורים בעייתיים, מסיר תוכן לא מתאים ומעביר דיווח לאחראי הקבוצה – מיידית. פשוט מוסיפים את מספר הבוט לקבוצה, וזהו.',
     watchDemo: 'צפייה בדמו',
     getStarted: 'התחל עכשיו',
@@ -65,7 +65,7 @@ export const translations = {
     
     whatsappLink: 'קישור לקבוצת הוואטסאפ',
     notificationPhone: 'טלפון/ים לקבלת התראות',
-    payerName: 'שם המשלם',
+    payerName: 'שם מלא',
     email: 'אימייל לקבלה',
     contactPhone: 'טלפון ליצירת קשר',
     payNow: 'שלם עכשיו',
@@ -150,7 +150,7 @@ export const translations = {
     
     whatsappLink: 'WhatsApp Group Link',
     notificationPhone: 'Phone(s) for Notifications',
-    payerName: 'Payer Name',
+    payerName: 'Full Name',
     email: 'Email for Receipt',
     contactPhone: 'Contact Phone',
     payNow: 'Pay Now',

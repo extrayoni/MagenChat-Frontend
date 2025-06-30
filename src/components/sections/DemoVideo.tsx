@@ -259,7 +259,7 @@ const DemoVideo: React.FC = () => {
               <span className="text-2xl">⚡</span>
             </div>
             <h3 className={`text-lg font-semibold text-gray-900 mb-2 ${isHebrew ? 'font-heebo' : 'font-inter'}`}>
-              {isHebrew ? 'זיהוי מיידי' : 'Instant Detection'}
+              {isHebrew ? 'זיהוי מיידי על ידי בינה מלאכותית' : 'Instant Detection by AI'}
             </h3>
             <p className={`text-gray-600 text-sm ${isHebrew ? 'font-heebo' : 'font-inter'}`}>
               {isHebrew ? 'המערכת מזהה תוכן לא מתאים תוך שניות' : 'System detects inappropriate content within seconds'}
