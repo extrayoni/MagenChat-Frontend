@@ -55,7 +55,7 @@ const Pricing: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
               <div className="bg-gradient-to-r from-blue-600 to-teal-600 p-6 text-center">
                 <img 
-                  src="/copped LOGO.jpg" 
+                  src="/MagenChat-Frontend/copped LOGO.jpg" 
                   alt="MagenChat Logo" 
                   className="h-16 w-16 rounded-full object-cover mx-auto mb-4 border-4 border-white/20"
                 />

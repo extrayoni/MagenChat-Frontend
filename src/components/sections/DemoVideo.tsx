@@ -118,7 +118,7 @@ const DemoVideo: React.FC = () => {
             >
               <video
                 ref={videoRef}
-                src="/public/Demo.mp4"
+                src="/MagenChat-Frontend//Demo.mp4"
                 className={`cursor-pointer ${
                   isFullscreen 
                     ? 'max-w-full max-h-full object-contain' 
