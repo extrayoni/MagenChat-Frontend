@@ -32,7 +32,7 @@ const Header: React.FC = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2 rtl:space-x-reverse">
             <img 
-              src="/MagenChat-Frontend/cropped-LOGO.jpg" 
+              src="/cropped-LOGO.jpg" 
               alt="MagenChat Logo" 
               className="h-12 w-12 rounded-full object-cover"
             />

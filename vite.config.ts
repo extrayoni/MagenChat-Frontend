@@ -7,7 +7,7 @@ export default defineConfig({
   build: {
     outDir: 'dist',
   },
-  base: '/MagenChat-Frontend/',
+  base: '/',
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
