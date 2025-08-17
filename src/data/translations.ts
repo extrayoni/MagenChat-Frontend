@@ -34,7 +34,7 @@ export const translations = {
     feature4Description: 'תגובה מנומסת וחינוכית לילד שמעודדת התנהגות נאותה',
     
     feature5Title: 'בלי התקנה',
-    feature5Description: 'לא דורש התקנה או הרשאות - פשוט הוספת מספר טלפון',
+    feature5Description: 'לא דורש התקנה או הרשאות - פשוט הוספת מספר הבוט לקבוצת הוואטסאפ',
     
     feature6Title: 'פרטיות מלאה',
     feature6Description: 'אין גישה להודעות פרטיות. הפעילות מוגבלת לקבוצות בלבד',
@@ -59,7 +59,17 @@ export const translations = {
     
     // Pricing Section
     pricingTitle: 'הצטרפו עכשיו',
-    pricingSubtitle: 'התחילו להגן על הילדים שלכם היום',
+    pricingSubtitle: 'בחרו את החבילה המתאימה לכם',
+    
+    // Basic Plan
+    basicPlanTitle: 'חבילה בסיסית',
+    basicPlanSubtitle: 'הגנה על הודעות טקסט',
+    basicPlanPrice: '🆓 חינם',
+    basicPlanDescription: 'זיהוי וסינון הודעות טקסט בעייתיות בלבד',
+    
+    // Premium Plan
+    premiumPlanTitle: 'חבילה מלאה',
+    premiumPlanSubtitle: 'הגנה מתקדמת מלאה',
     monthlyPrice: '💳 100 ש"ח בחודש',
     firstMonthFree: 'חודש ראשון חינם!',
     
@@ -69,6 +79,28 @@ export const translations = {
     email: 'אימייל לקבלה',
     contactPhone: 'טלפון ליצירת קשר',
     payNow: 'שלם עכשיו',
+    choosePlan: 'בחירת חבילה',
+    selectBasic: 'בחירת חבילה בסיסית',
+    selectPremium: 'בחירת חבילה מלאה',
+    
+    // Plan features
+    basicFeatures: [
+      'זיהוי מיידי של טקסט בעייתי',
+      'מחיקה אוטומטית של הודעות טקסט',
+      'התרעות בזמן אמת',
+      'תמיכה טכנית בסיסית',
+      'הגנה על קבוצה אחת'
+    ],
+    premiumFeatures: [
+      'זיהוי מיידי של תוכן בעייתי (טקסט, קול, תמונות)',
+      'מחיקה אוטומטית של כל סוגי ההודעות',
+      'התרעות בזמן אמת',
+      'תמיכה טכנית מלאה',
+      'הגנה על קבוצה אחת',
+      'סינון הקלטות קוליות',
+      'בדיקת תמונות ותוכן ויזואלי',
+      'סינון קישורים מסוכנים'
+    ],
     
     // Footer
     footerTitle: 'מגןצ\'אט',
@@ -119,7 +151,7 @@ export const translations = {
     feature4Description: 'Polite and educational response to children encouraging appropriate behavior',
     
     feature5Title: 'No Installation',
-    feature5Description: 'No installation or permissions required - simply add phone number',
+    feature5Description: 'No installation or permissions required - simply add the bot number to your WhatsApp group',
     
     feature6Title: 'Full Privacy',
     feature6Description: 'No access to private messages. Activity limited to groups only',
@@ -144,7 +176,17 @@ export const translations = {
     
     // Pricing Section
     pricingTitle: 'Join Now',
-    pricingSubtitle: 'Start protecting your children today',
+    pricingSubtitle: 'Choose the plan that suits you',
+    
+    // Basic Plan
+    basicPlanTitle: 'Basic Plan',
+    basicPlanSubtitle: 'Text message protection',
+    basicPlanPrice: '🆓 Free',
+    basicPlanDescription: 'Detection and filtering of problematic text messages only',
+    
+    // Premium Plan
+    premiumPlanTitle: 'Full Plan',
+    premiumPlanSubtitle: 'Complete advanced protection',
     monthlyPrice: '💳 100 NIS per month',
     firstMonthFree: 'First month free!',
     
@@ -154,6 +196,28 @@ export const translations = {
     email: 'Email for Receipt',
     contactPhone: 'Contact Phone',
     payNow: 'Pay Now',
+    choosePlan: 'Choose Plan',
+    selectBasic: 'Select Basic Plan',
+    selectPremium: 'Select Premium Plan',
+    
+    // Plan features
+    basicFeatures: [
+      'Instant detection of problematic text',
+      'Automatic deletion of text messages',
+      'Real-time notifications',
+      'Basic technical support',
+      'Protection for one group'
+    ],
+    premiumFeatures: [
+      'Instant detection of problematic content (text, voice, images)',
+      'Automatic deletion of all message types',
+      'Real-time notifications',
+      'Full technical support',
+      'Protection for one group',
+      'Voice recording filtering',
+      'Image and visual content checking',
+      'Dangerous link filtering'
+    ],
     
     // Footer
     footerTitle: 'MagenChat',
