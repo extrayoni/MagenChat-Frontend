@@ -1,49 +1,46 @@
 import React, { useState } from 'react';
-import { LanguageProvider } from './contexts/LanguageContext';
-import Header from './components/common/Header';
-import Hero from './components/sections/Hero';
-import DemoVideo from './components/sections/DemoVideo';
-import Features from './components/sections/Features';
-import Contact from './components/sections/Contact';
-import Pricing from './components/sections/Pricing';
-import Footer from './components/common/Footer';
+import Nav from './components/Nav';
+import Hero from './components/Hero';
+import ValueStrip from './components/ValueStrip';
+import Problem from './components/Problem';
+import HowItWorks from './components/HowItWorks';
+import Features from './components/Features';
+import ContentCoverage from './components/ContentCoverage';
+import LiveDemo from './components/LiveDemo';
+import Pricing from './components/Pricing';
+import FAQ from './components/FAQ';
+import FinalCTA from './components/FinalCTA';
+import Footer from './components/Footer';
 import PrivacyPolicy from './components/pages/PrivacyPolicy';
 import TermsOfService from './components/pages/TermsOfService';
 
 type Page = 'home' | 'privacy' | 'terms';
 
-function App() {
-  const [currentPage, setCurrentPage] = useState<Page>('home');
+const TRIAL_DAYS = 14;
 
-  const renderPage = () => {
-    switch (currentPage) {
-      case 'privacy':
-        return <PrivacyPolicy onNavigate={setCurrentPage} />;
-      case 'terms':
-        return <TermsOfService onNavigate={setCurrentPage} />;
-      default:
-        return (
-          <>
-            <Header />
-            <main>
-              <Hero />
-              <DemoVideo />
-              <Features />
-              <Contact />
-              <Pricing />
-            </main>
-            <Footer onNavigate={setCurrentPage} />
-          </>
-        );
-    }
-  };
+function App() {
+  const [page, setPage] = useState<Page>('home');
+
+  if (page === 'privacy') return <PrivacyPolicy onNavigate={setPage} />;
+  if (page === 'terms') return <TermsOfService onNavigate={setPage} />;
 
   return (
-    <LanguageProvider>
-      <div className="min-h-screen bg-white">
-        {renderPage()}
-      </div>
-    </LanguageProvider>
+    <div style={{ fontFamily: "'Assistant', sans-serif", overflowX: 'hidden' }}>
+      <Nav trialDays={TRIAL_DAYS} />
+      <main>
+        <Hero trialDays={TRIAL_DAYS} />
+        <ValueStrip />
+        <Problem />
+        <HowItWorks />
+        <Features />
+        <ContentCoverage />
+        <LiveDemo />
+        <Pricing trialDays={TRIAL_DAYS} />
+        <FAQ />
+        <FinalCTA trialDays={TRIAL_DAYS} />
+      </main>
+      <Footer onNavigate={setPage} />
+    </div>
   );
 }
 
