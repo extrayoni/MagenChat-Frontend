@@ -17,7 +17,7 @@ export default function Footer({ onNavigate }: Props) {
           </span>
         </div>
         <div style={{ display: 'flex', gap: 26, color: '#5C6B64', fontWeight: 600, fontSize: 15, flexWrap: 'wrap' }}>
-          {[{ label: 'איך זה עובד', id: 'how' }, { label: 'מחירים', id: 'pricing' }, { label: 'שאלות', id: 'faq' }].map(l => (
+          {[{ label: 'איך זה עובד', id: 'how' }, { label: 'המלצות', id: 'voices' }, { label: 'שאלות', id: 'faq' }].map(l => (
             <a key={l.id} href={`#${l.id}`} onClick={e => { e.preventDefault(); scrollTo(l.id); }}
               style={{ textDecoration: 'none', color: '#5C6B64' }}>{l.label}</a>
           ))}

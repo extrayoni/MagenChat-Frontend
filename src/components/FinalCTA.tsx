@@ -1,8 +1,6 @@
 import React from 'react';
 
-interface Props { trialDays: number; }
-
-export default function FinalCTA({ trialDays }: Props) {
+export default function FinalCTA() {
   return (
     <section style={{ padding: '80px 6vw' }}>
       <div style={{
@@ -24,7 +22,7 @@ export default function FinalCTA({ trialDays }: Props) {
             fontWeight: 800, fontSize: 19, padding: '17px 38px', borderRadius: 999,
             textDecoration: 'none', position: 'relative', boxShadow: '0 16px 30px -12px rgba(0,0,0,.4)',
           }}>
-          התחילו {trialDays} ימי ניסיון חינם
+          הצטרפו לבטא — בחינם
         </a>
       </div>
     </section>

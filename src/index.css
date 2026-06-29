@@ -30,6 +30,10 @@ body {
   0%, 100% { box-shadow: 0 0 0 0 rgba(14,125,94,.35); }
   50% { box-shadow: 0 0 0 14px rgba(14,125,94,0); }
 }
+@keyframes mcPulseRed {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(226,67,58,.5); }
+  50% { box-shadow: 0 0 0 7px rgba(226,67,58,0); }
+}
 
 .mc-float { animation: mcFloat 4s ease-in-out infinite; }
 .mc-fade-up { animation: mcFadeUp .7s ease both; }

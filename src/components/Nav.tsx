@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
 
-interface Props { trialDays: number; }
-
 const scrollTo = (id: string) => {
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 };
 
-export default function Nav({ trialDays }: Props) {
+export default function Nav() {
   const [open, setOpen] = useState(false);
 
   const links = [
     { label: 'איך זה עובד', id: 'how' },
     { label: 'יכולות', id: 'features' },
-    { label: 'מחירים', id: 'pricing' },
+    { label: 'המלצות', id: 'voices' },
     { label: 'שאלות נפוצות', id: 'faq' },
   ];
 

@@ -1,11 +1,9 @@
 import React from 'react';
 
-interface Props { trialDays: number; }
-
 const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 
-export default function Hero({ trialDays }: Props) {
-  const label = `התחילו ${trialDays} ימי ניסיון חינם`;
+export default function Hero() {
+  const label = 'הצטרפו לבטא — בחינם';
 
   return (
     <section id="top" style={{
