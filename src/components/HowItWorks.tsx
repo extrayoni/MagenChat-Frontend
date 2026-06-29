@@ -82,7 +82,6 @@ export default function HowItWorks() {
   return (
     <section id="how" style={{ padding: '96px 6vw', background: '#fff' }}>
       <div style={{ maxWidth: 1180, margin: '0 auto', textAlign: 'center' }}>
-        <span style={{ fontFamily: "'Rubik'", color: '#0E7D5E', fontWeight: 700, fontSize: 15, letterSpacing: 1 }}>ההתחלה</span>
         <h2 style={{ fontFamily: "'Rubik'", fontWeight: 800, fontSize: 44, letterSpacing: '-1px', margin: '14px 0 6px', color: '#16261F' }}>מוכן תוך שתי דקות</h2>
         <p style={{ fontSize: 19, color: '#5C6B64', margin: '0 auto', maxWidth: 560 }}>בלי הורדות, בלי הגדרות מסובכות. מוסיפים את מגןצ'אט לקבוצה — והוא עושה את השאר.</p>
       </div>

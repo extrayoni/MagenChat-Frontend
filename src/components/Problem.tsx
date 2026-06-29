@@ -9,7 +9,6 @@ export default function Problem() {
         alignItems: 'center', maxWidth: 1120, margin: '0 auto',
       }} className="problem-grid">
         <div>
-          <span style={{ fontFamily: "'Rubik'", color: '#FF7A59', fontWeight: 700, fontSize: 15, letterSpacing: 1 }}>הכאב האמיתי</span>
           <h2 style={{
             fontFamily: "'Rubik'", fontWeight: 800, fontSize: 'clamp(32px,4vw,48px)',
             lineHeight: 1.1, letterSpacing: '-1.5px', margin: '14px 0 0', color: '#fff',
@@ -19,7 +18,8 @@ export default function Problem() {
           </h2>
           <p style={{ fontSize: 20, color: '#B9B2A8', lineHeight: 1.65, margin: '22px 0 0', maxWidth: 500 }}>
             בזמן שאתם בעבודה, בפגישה או ישנים —{' '}
-            <strong style={{ color: '#fff' }}>מאות הודעות</strong> זורמות בקבוצות של הילד. קללה אחת נכתבת ונמחקת תוך שניות, אבל הילד כבר ראה.
+            <strong style={{ color: '#fff' }}>מאות הודעות</strong> זורמות בקבוצות ואתם לא יכולים להיות שוטר. מגןצ'אט דואג למחוק תוכן רעיל בזמן אמת.{' '}
+            <strong style={{ color: '#fff' }}>הגנה מלאה. שקט נפשי.</strong>
           </p>
           <div style={{ display: 'flex', gap: 14, marginTop: 38, flexWrap: 'wrap' }}>
             {[
@@ -35,30 +35,57 @@ export default function Problem() {
           </div>
         </div>
 
-        {/* Night flood visual */}
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <div style={{ width: 330, background: '#1C1813', border: '1px solid #322C25', borderRadius: 26, padding: 18, boxShadow: '0 40px 80px -30px rgba(0,0,0,.7)' }}>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 4px 14px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 8, color: '#8A837A', fontSize: 13, fontWeight: 600 }}>🌙 02:14 בלילה</div>
-              <span style={{ background: '#E25433', color: '#fff', fontSize: 12, fontWeight: 700, padding: '4px 10px', borderRadius: 999 }}>23 חדשות</span>
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-              <div style={{ alignSelf: 'flex-start', maxWidth: '82%', background: '#2A2620', color: '#D7D1C8', padding: '8px 12px', borderRadius: '12px 12px 12px 2px', fontSize: 13.5 }}>
-                מי בקבוצה? כולם ערים? 👀
+        {/* Night-flood phone mockup */}
+        <div style={{ display: 'flex', justifyContent: 'center', position: 'relative' }}>
+          <div style={{
+            position: 'absolute', top: -4, right: -10, zIndex: 3,
+            background: '#1F1B17', border: '1px solid #3A332B', borderRadius: 15,
+            padding: '9px 13px', display: 'flex', alignItems: 'center', gap: 9,
+            boxShadow: '0 18px 40px -16px rgba(0,0,0,.85)',
+            animation: 'mcFloat 4s ease-in-out infinite',
+          }}>
+            <span style={{ fontSize: 18 }}>😴</span>
+            <div style={{ color: '#E7E0D6', fontSize: 12.5, fontWeight: 600, lineHeight: 1.3 }}>02:14 — ואתם<br />ישנים</div>
+          </div>
+
+          <div style={{ width: 300, height: 592, background: '#000', borderRadius: 42, padding: 11, boxShadow: '0 44px 90px -28px rgba(0,0,0,.85)' }}>
+            <div style={{ width: '100%', height: '100%', background: '#0B141A', borderRadius: 32, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+              {/* WhatsApp dark header */}
+              <div style={{ background: '#1F2C34', padding: '12px 14px', display: 'flex', alignItems: 'center', gap: 10 }}>
+                <span style={{ color: '#8696A0', fontSize: 22, lineHeight: 1 }}>‹</span>
+                <div style={{ width: 38, height: 38, borderRadius: '50%', background: '#3B4A54', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 18 }}>👧</div>
+                <div style={{ flex: 1 }}>
+                  <div style={{ color: '#E9EDEF', fontWeight: 600, fontSize: 14, fontFamily: "'Rubik'" }}>כיתה ו'3 — הבנות</div>
+                  <div style={{ color: '#8696A0', fontSize: 11 }}>32 משתתפים</div>
+                </div>
+                <span style={{ color: '#8696A0', fontSize: 17 }}>⋮</span>
               </div>
-              <div style={{ alignSelf: 'flex-start', maxWidth: '90%', background: '#2A1A16', border: '1px solid #5C2A1E', padding: '9px 12px', borderRadius: 12, position: 'relative', overflow: 'hidden' }}>
-                <div style={{ filter: 'blur(4px)', color: '#FF9D85', fontSize: 13.5, userSelect: 'none' }}>אתה כזה ××× מטומטם תעוף</div>
-                <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#FF7A59', fontWeight: 700, fontSize: 12 }}>שפה פוגענית</div>
+
+              {/* Messages */}
+              <div style={{ flex: 1, padding: '12px 9px', display: 'flex', flexDirection: 'column', gap: 6, overflow: 'hidden', background: '#0B141A' }}>
+                <div style={{ alignSelf: 'center', background: '#182229', color: '#8696A0', fontSize: 10, padding: '4px 11px', borderRadius: 9, marginBottom: 2 }}>היום</div>
+                <div style={{ alignSelf: 'center', background: '#1C2A22', color: '#8FA99A', fontSize: 10.5, padding: '4px 12px', borderRadius: 9, marginBottom: 3 }}>🔴 23 הודעות שלא נקראו</div>
+
+                {[
+                  { name: 'שירה', color: '#7FB3D5', text: 'מישהי ערה?? 😴', time: '02:11' },
+                  { name: 'דנה', color: '#E29CC0', text: 'כולן ישנות חחח', time: '02:12' },
+                  { name: 'שירה', color: '#7FB3D5', text: 'נועה את אפס, למה את בכלל בקבוצה הזאת', time: '02:13' },
+                  { name: 'דנה', color: '#E29CC0', text: 'חחחחח 💀', time: '02:13' },
+                  { name: 'שירה', color: '#7FB3D5', text: 'אף אחת לא סובלת אותך, תעופי מפה כבר 🤮', time: '02:14' },
+                ].map((m, i) => (
+                  <div key={i} style={{ alignSelf: 'flex-start', maxWidth: '90%', background: '#202C33', borderRadius: '8px 8px 8px 2px', padding: '5px 9px 4px' }}>
+                    <div style={{ fontWeight: 600, fontSize: 12, color: m.color }}>{m.name}</div>
+                    <div style={{ fontSize: 13.5, color: '#E9EDEF', lineHeight: 1.35 }}>{m.text}</div>
+                    <div style={{ textAlign: 'left', fontSize: 9.5, color: '#8696A0', marginTop: 1 }}>{m.time}</div>
+                  </div>
+                ))}
               </div>
-              <div style={{ alignSelf: 'flex-start', maxWidth: '70%', background: '#2A2620', color: '#D7D1C8', padding: '8px 12px', borderRadius: '12px 12px 12px 2px', fontSize: 13.5 }}>חחח</div>
-              <div style={{ alignSelf: 'flex-start', maxWidth: '88%', background: '#2A1A16', border: '1px solid #5C2A1E', padding: '9px 12px', borderRadius: 12, position: 'relative', overflow: 'hidden' }}>
-                <div style={{ filter: 'blur(4px)', color: '#FF9D85', fontSize: 13.5, userSelect: 'none' }}>אף אחד לא רוצה אותך בקבוצה ×××</div>
-                <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#FF7A59', fontWeight: 700, fontSize: 12 }}>חרם / פגיעה</div>
+
+              {/* Input bar */}
+              <div style={{ background: '#0B141A', padding: '8px 10px', display: 'flex', alignItems: 'center', gap: 8 }}>
+                <div style={{ flex: 1, background: '#202C33', borderRadius: 999, padding: '8px 14px', color: '#8696A0', fontSize: 12.5 }}>הודעה</div>
+                <span style={{ flexShrink: 0, width: 34, height: 34, borderRadius: '50%', background: '#00A884', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#0B141A', fontSize: 14 }}>➤</span>
               </div>
-            </div>
-            <div style={{ marginTop: 14, display: 'flex', alignItems: 'center', gap: 10, background: '#13110F', borderRadius: 14, padding: '12px 14px' }}>
-              <span style={{ fontSize: 20 }}>😴</span>
-              <div style={{ color: '#8A837A', fontSize: 13, lineHeight: 1.4 }}>אתם ישנים. הילד.ה לבד מול זה.</div>
             </div>
           </div>
         </div>

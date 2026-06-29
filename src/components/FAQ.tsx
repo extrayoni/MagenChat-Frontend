@@ -10,13 +10,12 @@ const faqs = [
 ];
 
 export default function FAQ() {
-  const [open, setOpen] = useState(-1);
+  const [open, setOpen] = useState(0);
 
   return (
     <section id="faq" style={{ padding: '96px 6vw', background: '#FBF7F0' }}>
       <div style={{ maxWidth: 760, margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: 46 }}>
-          <span style={{ fontFamily: "'Rubik'", color: '#0E7D5E', fontWeight: 700, fontSize: 15, letterSpacing: 1 }}>שאלות נפוצות</span>
           <h2 style={{ fontFamily: "'Rubik'", fontWeight: 800, fontSize: 42, letterSpacing: '-1px', margin: '14px 0 0', color: '#16261F' }}>כל מה שחשוב לדעת</h2>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>

@@ -14,7 +14,6 @@ export default function Features() {
     <section id="features" style={{ padding: '96px 6vw', background: '#F2FAF6' }}>
       <div style={{ maxWidth: 1180, margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: 50 }}>
-          <span style={{ fontFamily: "'Rubik'", color: '#0E7D5E', fontWeight: 700, fontSize: 15, letterSpacing: 1 }}>היכולות</span>
           <h2 style={{ fontFamily: "'Rubik'", fontWeight: 800, fontSize: 44, letterSpacing: '-1px', margin: '14px 0 0', color: '#16261F' }}>הגנה חכמה, לא מציצנית</h2>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 22 }} className="features-grid">
