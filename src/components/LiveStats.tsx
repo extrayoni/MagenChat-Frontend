@@ -1,20 +1,29 @@
 import React, { useState, useEffect } from 'react';
 
+// Fixed epoch: June 28, 2026 00:00:00 UTC
+// BASE + floor(elapsed_seconds * RATE) = design values at ~June 29 noon UTC
+const EPOCH = 1751068800;
+const BASE = { classes: 1117, scanned: 2_224_200, blocked: 5_460 };
+const RATE = { classes: 0.001, scanned: 1.5, blocked: 0.1 };
+
+function getStats() {
+  const elapsed = Math.floor(Date.now() / 1000) - EPOCH;
+  return {
+    classes: BASE.classes + Math.floor(elapsed * RATE.classes),
+    scanned: BASE.scanned + Math.floor(elapsed * RATE.scanned),
+    blocked: BASE.blocked + Math.floor(elapsed * RATE.blocked),
+  };
+}
+
 export default function LiveStats() {
-  const [liveClasses, setLiveClasses] = useState(1247);
-  const [liveScanned, setLiveScanned] = useState(2418600);
-  const [liveBlocked, setLiveBlocked] = useState(18420);
+  const [stats, setStats] = useState(getStats);
 
   useEffect(() => {
-    const id = setInterval(() => {
-      setLiveScanned(n => n + Math.floor(25 + Math.random() * 95));
-      setLiveBlocked(n => n + (Math.random() < 0.3 ? 1 : 0));
-      setLiveClasses(n => n + (Math.random() < 0.1 ? 1 : 0));
-    }, 950);
+    const id = setInterval(() => setStats(getStats()), 950);
     return () => clearInterval(id);
   }, []);
 
-  const fmt = (n: number) => Math.round(n).toLocaleString('en-US');
+  const fmt = (n: number) => n.toLocaleString('en-US');
 
   return (
     <section style={{ padding: '48px 6vw', background: '#F2FAF6', borderTop: '1px solid #E6F1EB', borderBottom: '1px solid #E6F1EB' }}>
@@ -25,15 +34,15 @@ export default function LiveStats() {
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 20 }} className="stats-grid">
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontFamily: "'Rubik'", fontWeight: 800, fontSize: 46, color: '#0E7D5E', lineHeight: 1, letterSpacing: '-1px' }}>{fmt(liveClasses)}</div>
+            <div style={{ fontFamily: "'Rubik'", fontWeight: 800, fontSize: 46, color: '#0E7D5E', lineHeight: 1, letterSpacing: '-1px' }}>{fmt(stats.classes)}</div>
             <div style={{ color: '#5C6B64', fontSize: 15, marginTop: 8 }}>כיתות מוגנות כרגע</div>
           </div>
           <div style={{ textAlign: 'center', borderInline: '1px solid #DCEAE3' }}>
-            <div style={{ fontFamily: "'Rubik'", fontWeight: 800, fontSize: 46, color: '#0E7D5E', lineHeight: 1, letterSpacing: '-1px' }}>{fmt(liveScanned)}</div>
+            <div style={{ fontFamily: "'Rubik'", fontWeight: 800, fontSize: 46, color: '#0E7D5E', lineHeight: 1, letterSpacing: '-1px' }}>{fmt(stats.scanned)}</div>
             <div style={{ color: '#5C6B64', fontSize: 15, marginTop: 8 }}>הודעות שנסרקו היום</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontFamily: "'Rubik'", fontWeight: 800, fontSize: 46, color: '#E2433A', lineHeight: 1, letterSpacing: '-1px' }}>{fmt(liveBlocked)}</div>
+            <div style={{ fontFamily: "'Rubik'", fontWeight: 800, fontSize: 46, color: '#E2433A', lineHeight: 1, letterSpacing: '-1px' }}>{fmt(stats.blocked)}</div>
             <div style={{ color: '#5C6B64', fontSize: 15, marginTop: 8 }}>הודעות פוגעניות נחסמו השבוע</div>
           </div>
         </div>
