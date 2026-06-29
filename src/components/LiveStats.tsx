@@ -1,25 +1,26 @@
 import React, { useState, useEffect } from 'react';
 
-// EPOCH = June 28, 2026 00:00:00 UTC
-// Rates calibrated so values match design at ~June 29 12:00 UTC (elapsed ~129600s)
-const EPOCH = 1751068800;
-const BASE = { classes: 0, scanned: 0, blocked: 0 };
-const RATE = { classes: 0.00048, scanned: 0.033, blocked: 0.00106 };
-
-function getStats() {
-  const elapsed = Math.floor(Date.now() / 1000) - EPOCH;
+// Seed starting values from seconds elapsed since UTC midnight so every fresh
+// page-load opens at a plausible "accumulated today" number.
+function seed() {
+  const now = new Date();
+  const s = now.getUTCHours() * 3600 + now.getUTCMinutes() * 60 + now.getUTCSeconds();
   return {
-    classes: BASE.classes + Math.floor(elapsed * RATE.classes),
-    scanned: BASE.scanned + Math.floor(elapsed * RATE.scanned),
-    blocked: BASE.blocked + Math.floor(elapsed * RATE.blocked),
+    classes: 62 + Math.floor(s * 0.00028),   // ~1 new class per hour
+    scanned: 4280 + Math.floor(s * 0.11),     // ~400 per hour
+    blocked: 137 + Math.floor(s * 0.0033),    // ~12 per hour
   };
 }
 
 export default function LiveStats() {
-  const [stats, setStats] = useState(getStats);
+  const [stats, setStats] = useState(seed);
 
   useEffect(() => {
-    const id = setInterval(() => setStats(getStats()), 1600);
+    const id = setInterval(() => setStats(s => ({
+      classes: s.classes + (Math.random() < 0.04 ? 1 : 0),
+      scanned: s.scanned + Math.floor(2 + Math.random() * 5),
+      blocked: s.blocked + (Math.random() < 0.12 ? 1 : 0),
+    })), 1600);
     return () => clearInterval(id);
   }, []);
 
