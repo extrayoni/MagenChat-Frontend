@@ -1,5 +1,17 @@
 import React from 'react';
 
+const FLOOD_MSGS = [
+  { name: 'שירה', c: '#7FB3D5', text: 'מישהי ערה?? 😴', time: '02:11' },
+  { name: 'דנה', c: '#E29CC0', text: 'כולן ישנות חחח', time: '02:12' },
+  { name: 'שירה', c: '#7FB3D5', text: 'נועה את אפסית, למה את בכלל בקבוצה הזאת', time: '02:13' },
+  { name: 'דנה', c: '#E29CC0', text: 'חחחחח 💀', time: '02:13' },
+  { name: 'שירה', c: '#7FB3D5', text: 'אף אחת לא סובלת אותך, תעופי מפה כבר 🤮', time: '02:14' },
+  { name: 'דנה', c: '#E29CC0', text: 'ראיתן מה היא לבשה היום? 🤢', time: '02:16' },
+  { name: 'מאיה', c: '#C9B6F0', text: 'שלחו לי סקרינשוט 📸', time: '02:17' },
+  { name: 'שירה', c: '#7FB3D5', text: 'פותחות קבוצה חדשה בלי נועה', time: '02:18' },
+];
+const FLOOD = [...FLOOD_MSGS, ...FLOOD_MSGS];
+
 export default function Problem() {
   return (
     <section style={{ padding: '96px 6vw', background: '#13110F', position: 'relative', overflow: 'hidden' }}>
@@ -61,24 +73,23 @@ export default function Problem() {
                 <span style={{ color: '#8696A0', fontSize: 17 }}>⋮</span>
               </div>
 
-              {/* Messages */}
-              <div style={{ flex: 1, padding: '12px 9px', display: 'flex', flexDirection: 'column', gap: 6, overflow: 'hidden', background: '#0B141A' }}>
-                <div style={{ alignSelf: 'center', background: '#182229', color: '#8696A0', fontSize: 10, padding: '4px 11px', borderRadius: 9, marginBottom: 2 }}>היום</div>
-                <div style={{ alignSelf: 'center', background: '#1C2A22', color: '#8FA99A', fontSize: 10.5, padding: '4px 12px', borderRadius: 9, marginBottom: 3 }}>🔴 23 הודעות שלא נקראו</div>
-
-                {[
-                  { name: 'שירה', color: '#7FB3D5', text: 'מישהי ערה?? 😴', time: '02:11' },
-                  { name: 'דנה', color: '#E29CC0', text: 'כולן ישנות חחח', time: '02:12' },
-                  { name: 'שירה', color: '#7FB3D5', text: 'נועה את אפס, למה את בכלל בקבוצה הזאת', time: '02:13' },
-                  { name: 'דנה', color: '#E29CC0', text: 'חחחחח 💀', time: '02:13' },
-                  { name: 'שירה', color: '#7FB3D5', text: 'אף אחת לא סובלת אותך, תעופי מפה כבר 🤮', time: '02:14' },
-                ].map((m, i) => (
-                  <div key={i} style={{ alignSelf: 'flex-start', maxWidth: '90%', background: '#202C33', borderRadius: '8px 8px 8px 2px', padding: '5px 9px 4px' }}>
-                    <div style={{ fontWeight: 600, fontSize: 12, color: m.color }}>{m.name}</div>
-                    <div style={{ fontSize: 13.5, color: '#E9EDEF', lineHeight: 1.35 }}>{m.text}</div>
-                    <div style={{ textAlign: 'left', fontSize: 9.5, color: '#8696A0', marginTop: 1 }}>{m.time}</div>
+              {/* Chat: animated flood */}
+              <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden', background: '#0B141A' }}>
+                <div style={{ padding: '10px 9px 4px', display: 'flex', flexDirection: 'column', gap: 5 }}>
+                  <div style={{ alignSelf: 'center', background: '#182229', color: '#8696A0', fontSize: 10, padding: '4px 11px', borderRadius: 9 }}>היום</div>
+                  <div style={{ alignSelf: 'center', background: '#2A1A1A', color: '#E89A93', fontSize: 10.5, padding: '4px 12px', borderRadius: 9 }}>🔴 23 הודעות שלא נקראו</div>
+                </div>
+                <div style={{ position: 'relative', flex: 1, overflow: 'hidden', WebkitMaskImage: 'linear-gradient(to bottom, transparent, #000 7%, #000 92%, transparent)', maskImage: 'linear-gradient(to bottom, transparent, #000 7%, #000 92%, transparent)' }}>
+                  <div style={{ position: 'absolute', top: 0, left: 0, right: 0, display: 'flex', flexDirection: 'column', gap: 6, padding: '6px 9px', animation: 'mcFlood 20s linear infinite' }}>
+                    {FLOOD.map((fm, i) => (
+                      <div key={i} style={{ alignSelf: 'flex-start', maxWidth: '92%', background: '#202C33', borderRadius: '8px 8px 8px 2px', padding: '5px 9px 4px' }}>
+                        <div style={{ fontWeight: 600, fontSize: 12, color: fm.c }}>{fm.name}</div>
+                        <div style={{ fontSize: 13.5, color: '#E9EDEF', lineHeight: 1.35 }}>{fm.text}</div>
+                        <div style={{ textAlign: 'left', fontSize: 9.5, color: '#8696A0', marginTop: 1 }}>{fm.time}</div>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
               </div>
 
               {/* Input bar */}

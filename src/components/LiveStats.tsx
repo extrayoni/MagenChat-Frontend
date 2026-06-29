@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
-// Fixed epoch: June 28, 2026 00:00:00 UTC
-// BASE + floor(elapsed_seconds * RATE) = design values at ~June 29 noon UTC
+// EPOCH = June 28, 2026 00:00:00 UTC
+// Rates calibrated so values match design at ~June 29 12:00 UTC (elapsed ~129600s)
 const EPOCH = 1751068800;
-const BASE = { classes: 1117, scanned: 2_224_200, blocked: 5_460 };
-const RATE = { classes: 0.001, scanned: 1.5, blocked: 0.1 };
+const BASE = { classes: 0, scanned: 0, blocked: 0 };
+const RATE = { classes: 0.00048, scanned: 0.033, blocked: 0.00106 };
 
 function getStats() {
   const elapsed = Math.floor(Date.now() / 1000) - EPOCH;
@@ -19,7 +19,7 @@ export default function LiveStats() {
   const [stats, setStats] = useState(getStats);
 
   useEffect(() => {
-    const id = setInterval(() => setStats(getStats()), 950);
+    const id = setInterval(() => setStats(getStats()), 1600);
     return () => clearInterval(id);
   }, []);
 
