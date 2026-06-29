@@ -1,19 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-// Seed starting values from seconds elapsed since UTC midnight so every fresh
-// page-load opens at a plausible "accumulated today" number.
-function seed() {
-  const now = new Date();
-  const s = now.getUTCHours() * 3600 + now.getUTCMinutes() * 60 + now.getUTCSeconds();
-  return {
-    classes: 62 + Math.floor(s * 0.00028),   // ~1 new class per hour
-    scanned: 4280 + Math.floor(s * 0.11),     // ~400 per hour
-    blocked: 137 + Math.floor(s * 0.0033),    // ~12 per hour
-  };
-}
-
 export default function LiveStats() {
-  const [stats, setStats] = useState(seed);
+  const [stats, setStats] = useState({ classes: 62, scanned: 4_280, blocked: 137 });
 
   useEffect(() => {
     const id = setInterval(() => setStats(s => ({
