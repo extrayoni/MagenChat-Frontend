@@ -38,7 +38,7 @@ export default function Pricing({ trialDays }: Props) {
         <div style={{ textAlign: 'center', marginBottom: 50 }}>
           <span style={{ fontFamily: "'Rubik'", color: '#0E7D5E', fontWeight: 700, fontSize: 15, letterSpacing: 1 }}>מחירים</span>
           <h2 style={{ fontFamily: "'Rubik'", fontWeight: 800, fontSize: 44, letterSpacing: '-1px', margin: '14px 0 6px', color: '#16261F' }}>מחיר אחד, שקט נפשי מלא</h2>
-          <p style={{ fontSize: 19, color: '#5C6B64' }}>מתחילים ב-{trialDays} ימי ניסיון חינם. בלי כרטיס אשראי.</p>
+          <p style={{ fontSize: 19, color: '#5C6B64' }}>מתחילים ב־{trialDays} ימי ניסיון חינם. בלי כרטיס אשראי.</p>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 22, alignItems: 'stretch' }} className="pricing-grid">
           {plans.map(p => (

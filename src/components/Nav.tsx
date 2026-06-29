@@ -8,7 +8,6 @@ const scrollTo = (id: string) => {
 
 export default function Nav({ trialDays }: Props) {
   const [open, setOpen] = useState(false);
-  const label = `התחילו ${trialDays} ימי ניסיון חינם`;
 
   const links = [
     { label: 'איך זה עובד', id: 'how' },
@@ -22,7 +21,7 @@ export default function Nav({ trialDays }: Props) {
       position: 'sticky', top: 0, zIndex: 50,
       display: 'flex', alignItems: 'center', justifyContent: 'space-between',
       padding: '16px 6vw',
-      background: 'rgba(255,255,255,.92)', backdropFilter: 'blur(14px)',
+      background: 'rgba(255,255,255,.82)', backdropFilter: 'blur(14px)',
       borderBottom: '1px solid #EAF1ED',
     }}>
       <a href="#top" onClick={e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
@@ -46,7 +45,7 @@ export default function Nav({ trialDays }: Props) {
             textDecoration: 'none', background: '#0E7D5E', color: '#fff',
             fontWeight: 700, fontSize: 15, padding: '11px 22px', borderRadius: 999,
             boxShadow: '0 8px 20px -8px rgba(14,125,94,.6)',
-          }}>{label}</a>
+          }}>התחילו עכשיו</a>
       </nav>
 
       {/* Mobile hamburger */}
@@ -72,7 +71,7 @@ export default function Nav({ trialDays }: Props) {
               textDecoration: 'none', background: '#0E7D5E', color: '#fff',
               fontWeight: 700, fontSize: 16, padding: '12px 22px', borderRadius: 999,
               textAlign: 'center',
-            }}>{label}</a>
+          }}>התחילו עכשיו</a>
         </div>
       )}
       <style>{`
