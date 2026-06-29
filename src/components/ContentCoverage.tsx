@@ -10,7 +10,6 @@ export default function ContentCoverage() {
   return (
     <section style={{ padding: '92px 6vw', background: '#fff' }}>
       <div style={{ maxWidth: 1020, margin: '0 auto', textAlign: 'center' }}>
-        <span style={{ fontFamily: "'Rubik'", color: '#0E7D5E', fontWeight: 700, fontSize: 15, letterSpacing: 1 }}>כיסוי מלא</span>
         <h2 style={{ fontFamily: "'Rubik'", fontWeight: 800, fontSize: 44, letterSpacing: '-1px', margin: '14px 0 0', color: '#16261F' }}>פגיעה לא חייבת להיכתב</h2>
         <p style={{ fontSize: 19, color: '#5C6B64', lineHeight: 1.6, margin: '18px auto 0', maxWidth: 600 }}>
           ילדים לא רק כותבים. מגןצ'אט מזהה תוכן פוגעני גם בתמונות וגם בהקלטות קוליות — לא רק בטקסט.
