@@ -3,7 +3,7 @@ import React from 'react';
 const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 
 export default function Hero() {
-  const label = 'הצטרפו לבטא — בחינם';
+  const label = 'הצטרפו לבטא, בחינם';
 
   return (
     <section id="top" style={{
@@ -32,7 +32,7 @@ export default function Hero() {
             <span style={{ color: '#0E7D5E' }}>בלי קללות ובלי פגיעות.</span>
           </h1>
           <p style={{ fontSize: 21, lineHeight: 1.55, color: '#46564E', margin: '22px 0 0', maxWidth: 520 }}>
-            מגןצ'אט מסנן שפה פוגענית וקללות בקבוצות הוואטסאפ של הילדים — בזמן אמת, ישירות בוואטסאפ,{' '}
+            מגןצ'אט מסנן שפה פוגענית וקללות בקבוצות הוואטסאפ של הילדים, בזמן אמת, ישירות בוואטסאפ,{' '}
             <strong style={{ color: '#16261F' }}>בלי שום התקנה</strong> ובלי אפליקציה על הטלפון של הילד.
           </p>
           <div style={{ display: 'flex', gap: 14, marginTop: 32, flexWrap: 'wrap' }}>

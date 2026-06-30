@@ -14,7 +14,7 @@ export default function FinalCTA() {
           תנו לילדים מרחב בטוח לדבר בו.
         </h2>
         <p style={{ fontSize: 20, color: '#BFEAD7', margin: '18px auto 0', maxWidth: 520, position: 'relative' }}>
-          הגנו על הקבוצות שלהם תוך שתי דקות — בלי התקנה, בלי לפגוע בפרטיות.
+          הגנו על הקבוצות שלהם תוך שתי דקות, בלי התקנה, בלי לפגוע בפרטיות.
         </p>
         <a href="#how" onClick={e => { e.preventDefault(); document.getElementById('how')?.scrollIntoView({ behavior: 'smooth' }); }}
           style={{
@@ -22,7 +22,7 @@ export default function FinalCTA() {
             fontWeight: 800, fontSize: 19, padding: '17px 38px', borderRadius: 999,
             textDecoration: 'none', position: 'relative', boxShadow: '0 16px 30px -12px rgba(0,0,0,.4)',
           }}>
-          הצטרפו לבטא — בחינם
+          הצטרפו לבטא, בחינם
         </a>
       </div>
     </section>
