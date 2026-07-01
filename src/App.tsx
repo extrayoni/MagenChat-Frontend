@@ -4,7 +4,6 @@ import Hero from './components/Hero';
 import ValueStrip from './components/ValueStrip';
 import LiveStats from './components/LiveStats';
 import Problem from './components/Problem';
-import HowItWorks from './components/HowItWorks';
 import Features from './components/Features';
 import ContentCoverage from './components/ContentCoverage';
 import LiveDemo from './components/LiveDemo';
@@ -32,7 +31,6 @@ function App() {
         <ValueStrip />
         <LiveStats />
         <Problem />
-        <HowItWorks />
         <Features />
         <ContentCoverage />
         <LiveDemo />

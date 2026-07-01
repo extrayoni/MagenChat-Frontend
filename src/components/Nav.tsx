@@ -8,7 +8,6 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
 
   const links = [
-    { label: 'איך זה עובד', id: 'how' },
     { label: 'יכולות', id: 'features' },
     { label: 'המלצות', id: 'voices' },
     { label: 'שאלות נפוצות', id: 'faq' },
@@ -38,7 +37,7 @@ export default function Nav() {
             {l.label}
           </a>
         ))}
-        <a href="#how" onClick={e => { e.preventDefault(); scrollTo('how'); }}
+        <a href="#beta" onClick={e => { e.preventDefault(); scrollTo('beta'); }}
           style={{
             textDecoration: 'none', background: '#0E7D5E', color: '#fff',
             fontWeight: 700, fontSize: 15, padding: '11px 22px', borderRadius: 999,
@@ -64,7 +63,7 @@ export default function Nav() {
               {l.label}
             </a>
           ))}
-          <a href="#how" onClick={e => { e.preventDefault(); scrollTo('how'); setOpen(false); }}
+          <a href="#beta" onClick={e => { e.preventDefault(); scrollTo('beta'); setOpen(false); }}
             style={{
               textDecoration: 'none', background: '#0E7D5E', color: '#fff',
               fontWeight: 700, fontSize: 16, padding: '12px 22px', borderRadius: 999,

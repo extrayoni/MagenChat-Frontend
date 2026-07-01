@@ -36,7 +36,7 @@ export default function Hero() {
             <strong style={{ color: '#16261F' }}>בלי שום התקנה</strong> ובלי אפליקציה על הטלפון של הילד.
           </p>
           <div style={{ display: 'flex', gap: 14, marginTop: 32, flexWrap: 'wrap' }}>
-            <a href="#how" onClick={e => { e.preventDefault(); scrollTo('how'); }}
+            <a href="#beta" onClick={e => { e.preventDefault(); scrollTo('beta'); }}
               style={{
                 display: 'inline-flex', alignItems: 'center', gap: 10,
                 background: '#0E7D5E', color: '#fff', fontWeight: 700, fontSize: 18,

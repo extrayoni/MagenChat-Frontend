@@ -16,7 +16,7 @@ export default function FinalCTA() {
         <p style={{ fontSize: 20, color: '#BFEAD7', margin: '18px auto 0', maxWidth: 520, position: 'relative' }}>
           הגנו על הקבוצות שלהם תוך שתי דקות, בלי התקנה, בלי לפגוע בפרטיות.
         </p>
-        <a href="#how" onClick={e => { e.preventDefault(); document.getElementById('how')?.scrollIntoView({ behavior: 'smooth' }); }}
+        <a href="#beta" onClick={e => { e.preventDefault(); document.getElementById('beta')?.scrollIntoView({ behavior: 'smooth' }); }}
           style={{
             display: 'inline-flex', marginTop: 30, background: '#fff', color: '#0E7D5E',
             fontWeight: 800, fontSize: 19, padding: '17px 38px', borderRadius: 999,
