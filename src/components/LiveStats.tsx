@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 export default function LiveStats() {
-  const [stats, setStats] = useState({ classes: 62, scanned: 4_280, blocked: 137 });
+  const [stats, setStats] = useState({ classes: 62, scanned: 847, blocked: 23 });
 
   useEffect(() => {
     const id = setInterval(() => setStats(s => ({
@@ -27,11 +27,11 @@ export default function LiveStats() {
             <div style={{ color: '#5C6B64', fontSize: 15, marginTop: 8 }}>כיתות מוגנות כרגע</div>
           </div>
           <div style={{ textAlign: 'center', borderInline: '1px solid #DCEAE3' }}>
-            <div style={{ fontFamily: "'Rubik'", fontWeight: 800, fontSize: 28, color: '#0E7D5E', lineHeight: 1, letterSpacing: '-1px' }}>{fmt(stats.scanned)}</div>
+            <div style={{ fontFamily: "'Rubik'", fontWeight: 800, fontSize: 46, color: '#0E7D5E', lineHeight: 1, letterSpacing: '-1px' }}>{fmt(stats.scanned)}</div>
             <div style={{ color: '#5C6B64', fontSize: 15, marginTop: 8 }}>הודעות שנסרקו היום</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontFamily: "'Rubik'", fontWeight: 800, fontSize: 28, color: '#E2433A', lineHeight: 1, letterSpacing: '-1px' }}>{fmt(stats.blocked)}</div>
+            <div style={{ fontFamily: "'Rubik'", fontWeight: 800, fontSize: 46, color: '#E2433A', lineHeight: 1, letterSpacing: '-1px' }}>{fmt(stats.blocked)}</div>
             <div style={{ color: '#5C6B64', fontSize: 15, marginTop: 8 }}>הודעות פוגעניות נחסמו השבוע</div>
           </div>
         </div>
