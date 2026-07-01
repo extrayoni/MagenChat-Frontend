@@ -34,7 +34,7 @@ function App() {
         <Features />
         <ContentCoverage />
         <LiveDemo />
-        <Beta />
+        <Beta onNavigate={setPage} />
         <Voices />
         <FAQ />
         <FinalCTA />

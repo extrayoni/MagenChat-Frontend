@@ -22,6 +22,7 @@ export default function Footer({ onNavigate }: Props) {
               style={{ textDecoration: 'none', color: '#5C6B64' }}>{l.label}</a>
           ))}
           <button onClick={() => onNavigate('privacy')} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#5C6B64', fontWeight: 600, fontSize: 15, fontFamily: "'Assistant',sans-serif" }}>פרטיות</button>
+          <button onClick={() => onNavigate('terms')} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#5C6B64', fontWeight: 600, fontSize: 15, fontFamily: "'Assistant',sans-serif" }}>תנאי שימוש</button>
         </div>
         <div style={{ color: '#9AAAA2', fontSize: 14 }}>© 2026 מגןצ'אט · כל הזכויות שמורות</div>
       </div>

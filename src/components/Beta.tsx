@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 
+type Page = 'home' | 'privacy' | 'terms';
+
 interface Props {
   spotsLeft?: number;
   spotsTotal?: number;
+  onNavigate?: (p: Page) => void;
 }
 
 const PERKS = [
@@ -14,7 +17,7 @@ const PERKS = [
 
 const INPUT_BASE = 'width:100%; box-sizing:border-box; background:#fff; border-radius:13px; padding:13px 15px; font-size:15.5px; color:#16261F; font-family:inherit; outline:none;';
 
-export default function Beta({ spotsLeft = 38, spotsTotal = 100 }: Props) {
+export default function Beta({ spotsLeft = 38, spotsTotal = 100, onNavigate }: Props) {
   const pct = Math.round((1 - spotsLeft / spotsTotal) * 100) + '%';
   const [role, setRole] = useState<'parent' | 'teacher'>('parent');
   const [name, setName] = useState('');
@@ -175,7 +178,16 @@ export default function Beta({ spotsLeft = 38, spotsTotal = 100 }: Props) {
           >
             <span style={{ fontSize: 21 }}>🟢</span> שליחה בוואטסאפ, בחינם
           </button>
-          <div style={{ color: '#7A8A82', fontSize: 13, marginTop: 12, textAlign: 'center' }}>נפתח וואטסאפ עם הפרטים מוכנים לשליחה · בלי כרטיס אשראי</div>
+          <div style={{ color: '#7A8A82', fontSize: 13, marginTop: 12, textAlign: 'center' }}>
+            נפתח וואטסאפ עם הפרטים מוכנים לשליחה · בלי כרטיס אשראי
+            {onNavigate && (
+              <span> ·{' '}
+                <button onClick={() => onNavigate('privacy')} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#7A8A82', fontSize: 13, fontFamily: 'inherit', textDecoration: 'underline', padding: 0 }}>פרטיות</button>
+                {' '}·{' '}
+                <button onClick={() => onNavigate('terms')} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#7A8A82', fontSize: 13, fontFamily: 'inherit', textDecoration: 'underline', padding: 0 }}>תנאי שימוש</button>
+              </span>
+            )}
+          </div>
         </div>
       </div>
       <style>{`@media(max-width:600px){.beta-perks{grid-template-columns:1fr!important;}}`}</style>
