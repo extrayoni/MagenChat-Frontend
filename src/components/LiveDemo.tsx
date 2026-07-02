@@ -99,10 +99,7 @@ export default function LiveDemo() {
                   if (m.isImage) return (
                     <div key={i} style={{ alignSelf: 'flex-start', maxWidth: '66%', background: '#fff', borderRadius: '9px 9px 9px 2px', padding: 4, boxShadow: '0 1px 1px rgba(0,0,0,.1)', animation: 'mcFadeUp .35s ease both' }}>
                       <div style={{ fontWeight: 700, fontSize: 12.5, color: m.nameColor, padding: '3px 6px 5px' }}>{m.name}</div>
-                      <div style={{ height: 92, borderRadius: 7, background: 'linear-gradient(135deg,#7FD3B6 0%,#0E7D5E 100%)', position: 'relative', display: 'flex', alignItems: 'flex-end', padding: 7 }}>
-                        <span style={{ fontSize: 22, position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)' }}>📓</span>
-                        <span style={{ fontSize: 10, color: 'rgba(255,255,255,.9)', position: 'relative' }}>📷 תמונה</span>
-                      </div>
+                      <img src="/noa-image.jpg" alt="תמונה" style={{ display: 'block', width: '100%', height: 92, borderRadius: 7, objectFit: 'cover' }} />
                     </div>
                   );
                   if (m.isBad) return (
