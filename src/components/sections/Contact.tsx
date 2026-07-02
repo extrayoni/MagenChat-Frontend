@@ -15,7 +15,7 @@ const Contact: React.FC = () => {
     e.preventDefault();
     // Handle form submission
     const message = `שלום, אני ${formData.name}. אשמח לשמוע עוד על מגןצ'אט. הטלפון שלי: ${formData.phone}`;
-    const whatsappUrl = `https://wa.me/972526053680?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/972526665958?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -49,38 +49,10 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <p className={`font-semibold text-gray-900 ${isHebrew ? 'font-heebo' : 'font-inter'}`}>
-                    יהונתן פרידבורג
+                    דניאל שולדנפריי
                   </p>
                   <p className={`text-gray-600 ${isHebrew ? 'font-heebo' : 'font-inter'}`}>
-                    052-605-3680
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-4 rtl:space-x-reverse">
-                <div className="bg-teal-100 rounded-lg p-3">
-                  <Phone className="h-6 w-6 text-teal-600" />
-                </div>
-                <div>
-                  <p className={`font-semibold text-gray-900 ${isHebrew ? 'font-heebo' : 'font-inter'}`}>
-                    רועי פרידבורג
-                  </p>
-                  <p className={`text-gray-600 ${isHebrew ? 'font-heebo' : 'font-inter'}`}>
-                    054-788-4076
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-4 rtl:space-x-reverse">
-                <div className="bg-green-100 rounded-lg p-3">
-                  <Mail className="h-6 w-6 text-green-600" />
-                </div>
-                <div>
-                  <p className={`text-gray-600 ${isHebrew ? 'font-heebo' : 'font-inter'}`}>
-                    johnny.fridburg@gmail.com
-                  </p>
-                  <p className={`text-gray-600 ${isHebrew ? 'font-heebo' : 'font-inter'}`}>
-                    roi.fridburg@gmail.com
+                    052-666-5958
                   </p>
                 </div>
               </div>

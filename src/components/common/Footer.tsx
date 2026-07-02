@@ -13,29 +13,14 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
   const contactInfo = [
     {
-      icon: Mail,
-      text: 'johnny.fridburg@gmail.com',
-      href: 'mailto:johnny.fridburg@gmail.com'
-    },
-    {
-      icon: Mail,
-      text: 'roi.fridburg@gmail.com',
-      href: 'mailto:roi.fridburg@gmail.com'
-    },
-    {
       icon: Phone,
-      text: '052-605-3680 - יהונתן פרידבורג',
-      href: 'tel:0526053680'
-    },
-    {
-      icon: Phone,
-      text: '054-788-4076 - רועי פרידבורג',
-      href: 'tel:0547884076'
+      text: '052-666-5958 - דניאל שולדנפריי',
+      href: 'tel:0526665958'
     },
     {
       icon: MessageCircle,
       text: 'WhatsApp',
-      href: 'https://wa.me/972526053680'
+      href: 'https://wa.me/972526665958'
     }
   ];
 

@@ -39,10 +39,7 @@ export default function PrivacyPolicy({ onNavigate }: Props) {
           <section style={{ background: '#E8F6EF', borderRadius: 16, padding: 24 }}>
             <h3 style={{ fontFamily: "'Rubik'", fontWeight: 700, fontSize: 19, color: '#0A5E47', marginBottom: 10 }}>יצירת קשר</h3>
             <p style={{ color: '#0E7D5E', fontSize: 15, lineHeight: 1.8 }}>
-              📧 johnny.fridburg@gmail.com<br />
-              📧 roi.fridburg@gmail.com<br />
-              📞 052-605-3680<br />
-              📞 054-788-4076
+              📞 דניאל שולדנפריי — 052-666-5958
             </p>
           </section>
         </div>
